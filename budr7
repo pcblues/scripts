@@ -1,0 +1,4 @@
+rsync -chavzP --stats pcblues@pcblues.com:~/web/org/sites/default/files/civicrm/custom
+rsync -chavzP --stats pcblues@pcblues.com:~/web/org/sites/default/files/civicrm/persist
+rsync -chavzP --stats pcblues@pcblues.com:~/web/org/sites/default/files/civicrm/upload
+rsync -chavzP --stats pcblues@pcblues.com:~/drprivate /Users/mo/BUpcblues

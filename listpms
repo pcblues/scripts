@@ -1,0 +1,5 @@
+#!/bin/zsh
+echo "Finding installed package managers"
+# which NAME|grep "NAME not found"
+# if blank, then NAME installed
+# show version?
