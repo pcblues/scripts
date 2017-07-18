@@ -44,7 +44,7 @@ pmlist = [
     ["SWareT","swaret"],
     ["Snappy","snapd"],
     ["Slapt-get","slapt-get"],
-    ["slackpkg","slackpkg"],
+    ["Slackpkg","slackpkg"],
     ["RPM","rpm"],
     ["OPKG","opkg"],
     ["GNU Guix","guix"]
