@@ -1,8 +1,86 @@
-#!/bin/zsh
-echo "Finding installed package managers"
+#!/usr/bin/python
+print "Finding installed package managers"
+print "----------------------------------"
+print
 # which NAME|grep "NAME not found"
 # if blank, then NAME installed
 # show version?
 # array of pm name, executable
 # iterate the array
 # show installed, not installed
+
+pmlist = [
+    ["Dpkg","dpkg"],
+    ["NPM","npm"],
+    ["Conan","conan"],
+    ["CPAN","cpan"],
+    ["Pip","pip"],
+    ["Gradle","gradle"],
+    ["LuaRocks","luarocks"],
+    ["Maven","mvn"],
+    ["Nuget","nuget"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"],
+    ["a","a"]
+        ]
+
+import subprocess 
+installed = []
+notinstalled = []
+for pm in pmlist:
+    p = subprocess.Popen(['which',pm[1]], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    result = pm[0]+":"
+    result = result.ljust(20)    
+    output = p.stdout.readlines()
+    if output == []:
+        result += "Not installed"
+        notinstalled.append(result)
+    else:
+        result += output[0]
+        installed.append(result)
+installed.sort()
+notinstalled.sort()
+print "INSTALLED"
+print 
+for line in installed:
+    print line,
+print
+print "NOT INSTALLED"
+print
+for line in notinstalled:
+    print line
+        
