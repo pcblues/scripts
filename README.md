@@ -1,5 +1,5 @@
 # scripts
 Shell scripts for home use
 
-##listpms
+## listpms
 Shell script in python to list installed package managers (macos/linux centric at present. Feel free to expand)
