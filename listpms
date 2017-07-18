@@ -3,3 +3,6 @@ echo "Finding installed package managers"
 # which NAME|grep "NAME not found"
 # if blank, then NAME installed
 # show version?
+# array of pm name, executable
+# iterate the array
+# show installed, not installed
